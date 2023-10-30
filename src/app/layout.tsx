@@ -1,12 +1,22 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Patua_One, Open_Sans } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
-
+const patuaOne = Patua_One({ 
+  weight: "400",
+  subsets: ['latin'],
+  display: 'swap', 
+  variable: '--font-patuaone',
+})
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-opensans',
+})
 export const metadata: Metadata = {
   title: 'Justin Medina',
   description: 'Personal website 2023',
+
 }
 
 export default function RootLayout({
@@ -16,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${openSans.variable} ${patuaOne.variable} font-sans`}>{children}</body>
     </html>
   )
 }
