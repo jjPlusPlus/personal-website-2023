@@ -17,3 +17,11 @@
 body {
   font-size: 1rem;
 }
+
+html {
+  font-family: var(--font-opensans);
+}
+ 
+h1, h2 {
+  font-family: var(--font-patuaone);
+}
