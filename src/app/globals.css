@@ -33,7 +33,7 @@ h1, h2 {
   font-family: var(--font-opensans);
 }
 .card {
-  @apply border border-gray-200 rounded-lg shadow-sm p-4;
+  @apply border border-gray-200 rounded-lg shadow-sm p-4 bg-white bg-opacity-60;
 }
 .pill {
   @apply rounded-md px-4 py-2;

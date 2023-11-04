@@ -44,9 +44,12 @@ export default function Home() {
 export function AboutMe() {
   return (
     <div className="my-8">
-      <h2 className="text-2xl">About Me</h2>
-      
-      <p>Front-end software engineer with a decade of experience. Tireless advocate for the end-user.</p>
+      <h2 className="text-2xl">
+        About Me
+      </h2>
+      <p className="text py-4">
+        Front-end software engineer with a decade of experience. Tireless advocate for the end-user.
+      </p>
 
       <div className="flex justify-center max-w-sm">
         <p className={
@@ -209,7 +212,7 @@ function Socials() {
         <li className="hover:-translate-y-1 transition ease-linear duration-100 transform-gpu">
           <a 
             href="https://github.com/jjPlusPlus" target="_blank" rel="noreferrer noopener"
-            className="flex items-center border rounded-md p-2 hover:bg-gray-100"
+            className="flex items-center card p-2 hover:bg-red-100 hover:bg-gradient-to-r from-red-50 via-red-100 to-white"
           >
             <Image
               src="/github-logo.svg"
@@ -232,7 +235,7 @@ function Socials() {
         <li className="hover:-translate-y-1 transition ease-linear duration-100 transform-gpu">
           <a 
             href="https://www.linkedin.com/in/jjmedina/" target="_blank" rel="noreferrer noopener"
-            className="flex items-center border rounded-md p-2 hover:bg-gray-100"
+            className="flex items-center card p-2 hover:bg-red-100 hover:bg-gradient-to-r from-red-50 via-red-100 to-white"
           >
             <Image
               src="/linkedin-logo.svg"
@@ -255,7 +258,7 @@ function Socials() {
         <li className="hover:-translate-y-1 transition ease-linear duration-100 transform-gpu">
           <a 
             href="https://www.instagram.com/mega094/" target="_blank" rel="noreferrer noopener"
-            className="flex items-center border rounded-md p-2 hover:bg-gray-100"
+            className="flex items-center card p-2 hover:bg-red-100 hover:bg-gradient-to-r from-red-50 via-red-100 to-white"
           >
             <Image
               src="/instagram-logo.svg"
