@@ -59,8 +59,8 @@ export default async function Page() {
         <div className="relative z-20">
           <AboutMe />
           <Socials />
-          <GithubContributionGraph contributions={contributions}/>
           <Experience />
+          <GithubContributionGraph contributions={contributions}/>
           <Skills />
         </div>
         {/* Fancy background pattern (3 rows) */}
