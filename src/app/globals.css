@@ -25,3 +25,43 @@ html {
 h1, h2 {
   font-family: var(--font-patuaone);
 }
+
+.patua {
+  font-family: var(--font-patuaone);
+}
+.opensans {
+  font-family: var(--font-opensans);
+}
+.card {
+  @apply border border-gray-200 rounded-lg shadow-sm p-4;
+}
+.pill {
+  @apply rounded-md px-4 py-2;
+}
+
+.flash-in {
+  animation: flashIn 2s infinite;
+}
+@keyframes flashIn {
+  0% {
+    transform: translateY(25%);
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  5% {
+    transform: translateY(0);
+    opacity: 1;
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+
+  95% {
+    transform: translateY(0);
+    opacity: 1;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  100% {
+    transform: translateY(-25%);
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
