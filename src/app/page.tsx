@@ -15,7 +15,7 @@ export default function Home() {
       </div>
       <div className={`
         container bg-white p-4 md:p-6 lg:p-10 max-w-5xl relative 
-        lg:rounded-r-[12rem]
+        lg:rounded-r-[15rem]
       `}>
         <div className="relative z-20">
           <AboutMe />
@@ -26,18 +26,15 @@ export default function Home() {
         {/* Fancy background pattern (3 rows) */}
         <div className={`
           absolute z-10 top-0 left-0 w-full h-1/3 rounded-full
-          bg-gradient-to-r from-white via-red-200 to-red-500 
-          slow-swap-sides ease-in-out
+          bg-gradient-to-r from-white via-red-200 to-red-500 opacity-10
         `}></div>
         <div className={`
           absolute z-10 top-1/3 left-0 w-full h-1/3 rounded-full
-          bg-gradient-to-r from-red-500 via-red-200 to-white
-          slow-swap-sides ease-in-out
+          bg-gradient-to-r from-red-500 via-red-200 to-white opacity-10
         `}></div>
         <div className={`
           absolute z-10 top-2/3 left-0 w-full h-1/3 rounded-full
-          bg-gradient-to-r from-white via-red-200 to-red-500
-          slow-swap-sides ease-in-out
+          bg-gradient-to-r from-white via-red-200 to-red-500 opacity-10
         `}></div>
       </div>
     </main>
@@ -46,40 +43,31 @@ export default function Home() {
 
 function AboutMe() {
   return (
-    <div className="my-8">
-      <h2 className="text-2xl">
+    <div className="my-12">
+      <h2 className="text-4xl">
         About Me
       </h2>
-      <p className="text py-4">
-        Front-end software engineer with a decade of experience. Tireless advocate for the end-user.
-      </p>
-
       <div className="flex justify-center max-w-sm">
-        <p className={
-          `patua italic text-6xl text-gray-400 translate-y-3`
-        }>
-          “
-        </p>
-        <p className="patua italic text-xl text-gray-600 py-4 px-8 flex flex-1">
-          <span className="pr-1">JJ</span>
-          <span className="text-gray-600 flex flex-1"><Affirmations speed={2000} animated={false} /></span>
-        </p>
-        <p className={
-          `patua italic text-6xl text-gray-400 translate-y-3`
-        }>
-          ”
+        <p className="patua text-2xl py-4 flex flex-1">
+          <span className="px-1 text-black tracking-widest">JJ</span>
+          <span className="text-gray-500 tracking-wide flex flex-1">
+            <Affirmations speed={2000} animated={false} />
+          </span>
         </p>
       </div>
+      <p className="opensans">
+        Justin "JJ" Medina is a front-end software engineer with a decade of experience, and a tireless advocate for the end-user.
+      </p>
     </div>
   )
 }
 
 function Experience() {
   return (
-    <div className="my-8">
-      <h2 className="text-2xl">Experience</h2>
+    <div className="my-12">
+      <h2 className="text-4xl my-8">Experience</h2>
       <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-        <li className="card">
+        <li className="card my-2">
           <div className='flex items-center justify-center pb-4 mb-2 border-b'>
             <div className="mr-4">
               <Image
@@ -108,7 +96,7 @@ function Experience() {
             I am heavily involved in product planning & architecture design, and I get to mentor our junior developers.
           </p>
         </li>
-        <li className="card">
+        <li className="card my-2">
           <div className='flex items-center justify-center pb-4 mb-2 border-b'>
             <div className="mr-4">
               <Image
@@ -138,7 +126,7 @@ function Experience() {
           </p>
           
         </li>
-        <li className="card">
+        <li className="card my-2">
           <div className='flex items-center justify-center pb-4 mb-2 border-b'>
             <div className="mr-4">
               <Image
@@ -175,8 +163,8 @@ function Experience() {
 function Skills() {
   return (
     <>
-      <div className="my-8">
-        <h2 className="text-2xl">Programming skills</h2>
+      <div className="my-12">
+        <h2 className="text-4xl my-8">Engineering skills</h2>
         <ul className='flex flex-wrap gap-2 my-2'>
           <li className='pill bg-gray-700 text-white'>Javascript</li>
           <li className='pill bg-gray-700 text-white'>Typescript</li>
@@ -188,16 +176,16 @@ function Skills() {
           <li className='pill bg-gray-700 text-white'>UI animation</li>
         </ul>
       </div>
-      <div className="my-8">
-        <h2 className="text-2xl">Design skills</h2>
+      <div className="my-12">
+        <h2 className="text-4xl my-8">Design skills</h2>
         <ul className='flex flex-wrap gap-2 my-2'>
           <li className='pill bg-gray-600 text-white'>UI Design</li>
           <li className='pill bg-gray-600 text-white'>User Research</li>
           <li className='pill bg-gray-600 text-white'>Product design</li>
         </ul>
       </div>
-      <div className="my-8">
-        <h2 className="text-2xl">Soft skills</h2>
+      <div className="my-12">
+        <h2 className="text-4xl my-8">Soft skills</h2>
         <ul className='flex flex-wrap gap-2 my-2'>
           <li className='pill bg-gray-500 text-white'>Mentoring</li>
           <li className='pill bg-gray-500 text-white'>Hiring</li>
@@ -211,8 +199,8 @@ function Skills() {
 
 function Socials() {
   return (
-    <div className="my-8">
-      <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+    <div className="my-12">
+      <ul className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
         <li className="hover:-translate-y-1 transition ease-linear duration-100 transform-gpu">
           <a 
             href="https://github.com/jjPlusPlus" target="_blank" rel="noreferrer noopener"
@@ -278,6 +266,29 @@ function Socials() {
               </p> 
               <p className="italic text-sm md:text-md">
                 @mega094
+              </p>
+            </div>  
+          </a>
+        </li>
+        <li className="hover:-translate-y-1 transition ease-linear duration-100 transform-gpu">
+          <a 
+            href="mailto:justinjcode@gmail.com" target="_blank" rel="noreferrer noopener"
+            className="flex items-center card p-2 hover:bg-red-100 hover:bg-gradient-to-r from-red-50 via-red-100 to-white"
+          >
+            <Image
+              src="/envelope-square.svg"
+              alt="Envelope symbol for email link"
+              className="mr-2"
+              style={{objectFit: "fill", transform: "scale(1.1)"}}
+              height={40}
+              width={40}
+            />
+            <div>
+              <p className="patua text-lg md:text-xl">
+                Email me
+              </p> 
+              <p className="italic text-sm md:text-md">
+                @gmail
               </p>
             </div>  
           </a>
