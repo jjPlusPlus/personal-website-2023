@@ -25,17 +25,17 @@ export default function Home() {
         </div>
         {/* Fancy background pattern (3 rows) */}
         <div className={`
-          absolute z-10 top-0 left-0 w-full h-1/3 rounded-tr-full rounded-br-full
+          absolute z-10 top-0 left-0 w-full h-1/3 rounded-full
           bg-gradient-to-r from-white via-red-200 to-red-500 
           slow-swap-sides ease-in-out
         `}></div>
         <div className={`
-          absolute z-10 top-1/3 left-0 w-full h-1/3 rounded-tl-full rounded-bl-full
+          absolute z-10 top-1/3 left-0 w-full h-1/3 rounded-full
           bg-gradient-to-r from-red-500 via-red-200 to-white
           slow-swap-sides ease-in-out
         `}></div>
         <div className={`
-          absolute z-10 top-2/3 left-0 w-full h-1/3 rounded-tr-full rounded-br-full
+          absolute z-10 top-2/3 left-0 w-full h-1/3 rounded-full
           bg-gradient-to-r from-white via-red-200 to-red-500
           slow-swap-sides ease-in-out
         `}></div>
