@@ -1,8 +1,48 @@
 import Image from 'next/image'
 import StringGlitch from 'components/StringGlitch'
 import Affirmations from 'components/Affirmations'
+import GithubContributionGraph from 'components/GithubContributionGraph'
 
-export default function Home() {
+async function getGithubContributionData() {
+  try {
+    const headers = {
+      'content-type': 'application/json',
+      'Authorization': `Bearer ${process.env.GITHUB_PUBLIC_KEY}`
+    }
+    const userName = 'JJPlusPlus'
+    const requestBody = {
+      query: `query($userName:String!) { 
+        user(login: $userName){
+          contributionsCollection {
+            contributionCalendar {
+              totalContributions
+              weeks {
+                contributionDays {
+                  contributionCount
+                  date
+                }
+              }
+            }
+          }
+        }
+      }`,
+      variables: { userName }
+    }
+    const options = {
+      method: 'POST',
+      headers,
+      body: JSON.stringify(requestBody)
+    }
+    const response = await (await fetch('https://api.github.com/graphql', options)).json()
+    return(response?.data?.user?.contributionsCollection)
+  }
+  catch (err) {
+    return({error: err})
+  }
+}
+
+export default async function Page() {
+  const contributions = await getGithubContributionData()
   return (
     <main className="flex flex-col min-h-screen bg-black">
       <div className="bg-black">
@@ -11,7 +51,6 @@ export default function Home() {
             <StringGlitch text="Justin J. Medina" interval={200} />
           </h1>
         </div>
-        
       </div>
       <div className={`
         container bg-white p-4 md:p-6 lg:p-10 max-w-5xl relative 
@@ -20,6 +59,7 @@ export default function Home() {
         <div className="relative z-20">
           <AboutMe />
           <Socials />
+          <GithubContributionGraph contributions={contributions}/>
           <Experience />
           <Skills />
         </div>
