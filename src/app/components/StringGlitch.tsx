@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react'
 
-// need to make props typescript
 interface StringGlitchProps {
   text: string
   interval: number
