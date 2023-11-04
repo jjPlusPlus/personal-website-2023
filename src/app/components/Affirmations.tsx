@@ -6,18 +6,21 @@ import { gsap } from 'gsap'
 const phrases = [
   "++",
   "is a web developer",
+  "is a software engineer",
+  "is a mechanical engineer",
   "is a night owl",
   "plays Overwatch",
   "will pet your dog",
   "is a hacker",
-  "drinks decaf coffee",
+  "loves React",
+  "is a Javascript specialist",
+  "drinks [decaf] coffee",
   "loves tacos",
   "has root access",
   "loves programming",
-  "is a certified mechanic",
   "makes games",
   "plays games",
-  "is smort",
+  "is smart",
 ]
 
 // make 'animated' non required
@@ -41,13 +44,23 @@ const Affirmations = (props:AffirmationsProps) => {
     return () => clearInterval(interval)
   }, [current])
 
+  
+
   return (
-    <span
-      className={
-        props.animated ? "flash-in inline-block" : "inline-block"
-      }
-    >
-      {phrases[current]}
+    <span className="relative w-full">
+      {phrases.map((phrase, index) => {
+        return ( 
+          <span
+            key={index}
+            className={`
+              absolute top-0 left-0
+              ${index == current ? "visible flash-in" : "invisible"}
+            `}
+          >
+            {phrase}
+          </span>
+        )
+      })}
     </span>
   )
 }

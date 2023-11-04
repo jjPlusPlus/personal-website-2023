@@ -57,8 +57,9 @@ function AboutMe() {
         }>
           “
         </p>
-        <p className="patua italic text-xl text-gray-600 py-4 px-8 flex-1">
-          JJ <span className="text-gray-600"><Affirmations speed={2000} animated={false} /></span>
+        <p className="patua italic text-xl text-gray-600 py-4 px-8 flex flex-1">
+          <span className="pr-1">JJ</span>
+          <span className="text-gray-600 flex flex-1"><Affirmations speed={2000} animated={false} /></span>
         </p>
         <p className={
           `patua italic text-6xl text-gray-400 translate-y-3`
