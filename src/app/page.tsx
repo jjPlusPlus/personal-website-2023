@@ -96,7 +96,7 @@ function AboutMe() {
         </p>
       </div>
       <p className="opensans">
-        Justin "JJ" Medina is a front-end software engineer with a decade of experience, and a tireless advocate for the end-user.
+        Justin &ldquo;JJ&rdquo; Medina is a front-end software engineer with a decade of experience, and a tireless advocate for the end-user.
       </p>
     </div>
   )
