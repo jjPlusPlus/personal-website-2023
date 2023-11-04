@@ -41,7 +41,7 @@ export default function Home() {
   )
 }
 
-export function AboutMe() {
+function AboutMe() {
   return (
     <div className="my-8">
       <h2 className="text-2xl">
