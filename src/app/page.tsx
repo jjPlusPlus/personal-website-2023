@@ -27,14 +27,17 @@ export default function Home() {
         <div className={`
           absolute z-10 opacity-10 top-0 left-0 w-full h-1/3 rounded-tr-full rounded-br-full
           bg-gradient-to-r from-white via-red-200 to-red-500 
+          slow-swap-sides ease-in-out
         `}></div>
         <div className={`
           absolute z-10 opacity-10 top-1/3 left-0 w-full h-1/3 rounded-tl-full rounded-bl-full
           bg-gradient-to-r from-red-500 via-red-200 to-white
+          slow-swap-sides ease-in-out
         `}></div>
         <div className={`
           absolute z-10 opacity-10 top-2/3 left-0 w-full h-1/3 rounded-tr-full rounded-br-full
           bg-gradient-to-r from-white via-red-200 to-red-500
+          slow-swap-sides ease-in-out
         `}></div>
       </div>
     </main>
