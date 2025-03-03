@@ -54,7 +54,7 @@ export default async function Page() {
       </div>
       <div className={`
         container bg-white p-4 md:p-6 lg:p-10 max-w-5xl relative 
-        lg:rounded-r-[15rem]
+        lg:rounded-r-[17rem]
       `}>
         <div className="relative z-20">
           <AboutMe />
@@ -96,7 +96,7 @@ function AboutMe() {
         </p>
       </div>
       <p className="opensans">
-        Justin &ldquo;JJ&rdquo; Medina is a front-end software engineer with a decade of experience, and a tireless advocate for the end-user.
+        Justin &ldquo;JJ&rdquo; Medina is a front-end software engineer with over a decade of experience, and a tireless advocate for the end-user.
       </p>
     </div>
   )
